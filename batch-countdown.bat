@@ -8,7 +8,7 @@ if %counter% lss 1 (
 ) else (
     echo %counter%
     set /a "counter-=1"
-    ping -n 2 127.0.0.1 >nul
+    timeout /nobreak /t 1 >nul
     goto loop
 )
 
